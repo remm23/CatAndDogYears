@@ -14,6 +14,9 @@
 		CACCF17B1FB71F9D0032F1E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACCF1791FB71F9D0032F1E3 /* LaunchScreen.storyboard */; };
 		CACCF1861FB71F9D0032F1E3 /* CatDogYearsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCF1851FB71F9D0032F1E3 /* CatDogYearsTests.swift */; };
 		CACCF1911FB71F9D0032F1E3 /* CatDogYearsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCF1901FB71F9D0032F1E3 /* CatDogYearsUITests.swift */; };
+		CACCF1A41FB97DFD0032F1E3 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCF1A31FB97DFD0032F1E3 /* Facts.swift */; };
+		CACCF1A51FB9E78F0032F1E3 /* bark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CACCF19F1FB97B520032F1E3 /* bark.mp3 */; };
+		CACCF1A61FB9E78F0032F1E3 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CACCF19E1FB97B520032F1E3 /* meow.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		CACCF18C1FB71F9D0032F1E3 /* CatDogYearsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatDogYearsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACCF1901FB71F9D0032F1E3 /* CatDogYearsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDogYearsUITests.swift; sourceTree = "<group>"; };
 		CACCF1921FB71F9D0032F1E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CACCF19E1FB97B520032F1E3 /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
+		CACCF19F1FB97B520032F1E3 /* bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bark.mp3; sourceTree = "<group>"; };
+		CACCF1A31FB97DFD0032F1E3 /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,10 @@
 		CACCF16F1FB71F9D0032F1E3 /* CatDogYears */ = {
 			isa = PBXGroup;
 			children = (
+				CACCF1A21FB97B590032F1E3 /* Sounds */,
 				CACCF1701FB71F9D0032F1E3 /* AppDelegate.swift */,
 				CACCF1721FB71F9D0032F1E3 /* ViewController.swift */,
+				CACCF1A31FB97DFD0032F1E3 /* Facts.swift */,
 				CACCF1741FB71F9D0032F1E3 /* Main.storyboard */,
 				CACCF1771FB71F9D0032F1E3 /* Assets.xcassets */,
 				CACCF1791FB71F9D0032F1E3 /* LaunchScreen.storyboard */,
@@ -123,6 +131,15 @@
 				CACCF1921FB71F9D0032F1E3 /* Info.plist */,
 			);
 			path = CatDogYearsUITests;
+			sourceTree = "<group>";
+		};
+		CACCF1A21FB97B590032F1E3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CACCF19F1FB97B520032F1E3 /* bark.mp3 */,
+				CACCF19E1FB97B520032F1E3 /* meow.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACCF1A51FB9E78F0032F1E3 /* bark.mp3 in Resources */,
+				CACCF1A61FB9E78F0032F1E3 /* meow.mp3 in Resources */,
 				CACCF17B1FB71F9D0032F1E3 /* LaunchScreen.storyboard in Resources */,
 				CACCF1781FB71F9D0032F1E3 /* Assets.xcassets in Resources */,
 				CACCF1761FB71F9D0032F1E3 /* Main.storyboard in Resources */,
@@ -260,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACCF1731FB71F9D0032F1E3 /* ViewController.swift in Sources */,
+				CACCF1A41FB97DFD0032F1E3 /* Facts.swift in Sources */,
 				CACCF1711FB71F9D0032F1E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +389,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +439,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -426,12 +448,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R35829MY5Q;
 				INFOPLIST_FILE = CatDogYears/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.remitobias.CatDogYears;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.remitobias.CatDogYears;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,12 +466,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R35829MY5Q;
 				INFOPLIST_FILE = CatDogYears/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.remitobias.CatDogYears;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.remitobias.CatDogYears;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
